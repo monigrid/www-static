@@ -37,25 +37,79 @@
         .logo {
             max-width: 200px;
             margin-bottom: 20px;
+            border-radius: 15px; /* Rounded corners for the logo */
         }
 
         footer {
             margin-top: 20px;
             font-size: 14px;
             color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        .email-signup {
+            margin-top: 30px;
+        }
+
+        .email-signup form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px; /* More rounded to match the button */
+            width: 250px;
+            margin-right: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005fa3;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform: scale(1.05); /* Add slight scaling on hover */
+        }
+
+        .contact-info {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Upload your logo and replace the src URL below -->
     <img class="logo" src="logo.jpg" alt="MoniGrid Logo">
-
     <h1>MoniGrid</h1>
-    <p>Monitoring your URLs from multiple locations with GitHub Actions.</p>
-    <p>We’re working hard to bring you the best monitoring solution.</p>
+    <p>Monitoring your URLs from multiple locations. And more.</p>
     <p><strong>Coming Soon!</strong></p>
+
+    <!-- Email Signup Form -->
+    <div class="email-signup">
+        <form action="https://formsubmit.co/info@monigrid.com" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email address" required>
+            <input type="submit" name="submit" value="Notify Me">
+        </form>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+        <p>For inquiries: <a href="mailto:info@monigrid.com">info@monigrid.com</a></p>
+    </div>
 
     <footer>
         &copy; 2024 MoniGrid | All rights reserved.
